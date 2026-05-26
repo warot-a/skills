@@ -29,17 +29,29 @@ A specialized skill that teaches new frameworks through hands-on, project-based 
 
 ## Getting Started
 
+### Installation
+
+Install this skill package from the repository:
+
+```bash
+pnx skills@latest add warot-a/skills
+```
+
+Or using npm:
+
+```bash
+npx skills@latest add warot-a/skills
+```
+
 ### Using This Skill in Claude Code
 
 1. **CLI:** Run `claude-code` with `/teach-framework` skill
    ```bash
-   claude-code
+   claude
    ```
    Then type: `/teach-framework`
 
-2. **Web App:** Open [claude.ai/code](https://claude.ai/code) and use the skill selector
-
-3. **IDE Extensions:** Available in VS Code, JetBrains, and other supported IDEs
+2. **IDE Extensions:** Available in VS Code, JetBrains, and other supported IDEs
 
 ### How the Teaching Process Works
 
@@ -111,28 +123,9 @@ skills/
 4. **Run the code** — After each step, actually test and verify it works
 5. **Experiment** — Once a concept lands, try variations before moving on
 
-## Contributing
-
-To improve or extend this skill:
-
-1. Update [`teach-framework/SKILL.md`](teach-framework/SKILL.md) with improvements
-2. Test the skill by walking through a framework tutorial
-3. Collect feedback on pacing, explanations, and code examples
-
 ## Resources
 
 - [Claude Code Documentation](https://claude.com/claude-code)
 - [Claude API / Anthropic SDK](https://docs.anthropic.com/)
 - [NestJS Docs](https://docs.nestjs.com/)
 - [Next.js Docs](https://nextjs.org/docs)
-
-## License
-
-[Specify your license here, e.g., MIT, Apache 2.0, etc.]
-
-## Contact
-
-For questions or feedback, reach out via:
-- GitHub Issues (if published)
-- Claude Code support
-- Direct feedback in your Claude Code session
