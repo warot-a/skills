@@ -1,5 +1,7 @@
 # Claude Code Skills
 
+[![skills.sh](https://skills.sh/b/warot-a/skills)](https://skills.sh/warot-a/skills)
+
 A repository of custom skills for [Claude Code](https://claude.com/claude-code), Anthropic's command-line IDE for Claude.
 
 ## Skills Included
