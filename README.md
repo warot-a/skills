@@ -11,21 +11,46 @@ A specialized skill that teaches new frameworks through hands-on, project-based 
 **Purpose:** Learn frameworks like NestJS, Next.js, and others by building real projects, not just reading documentation.
 
 **How it works:**
+
 - The skill guides you step-by-step through building a real mini-project
 - Each step teaches one core concept with concrete code examples
 - You're never given incomplete code — only tested snippets and precise placement instructions
 - The skill never runs commands or edits files for you; you do the work while it coaches
 
 **Supported frameworks:**
+
 - **NestJS** — Backend REST APIs with modules, controllers, services, and guards
 - **Next.js** — Full-stack React apps with file-based routing and server components
 - **Generic frameworks** — Other frameworks by following their official getting-started docs
 
 **When to use this skill:**
+
 - You say "teach me NestJS" or "learn Next.js"
 - You want to build a real project while learning, not just follow a tutorial
 - You prefer learning by doing, guided by an expert coach
 - Type: `/teach-framework` (or use the skill selector in Claude Code)
+
+---
+
+### `github-release`
+
+A skill that guides you through the full release workflow end-to-end.
+
+**Purpose:** Bump version, commit, tag, push, and publish a GitHub release with a formatted changelog — all in one flow.
+
+**How it works:**
+
+1. Asks bump type (patch / minor / major), release mode (draft or publish), and source code preference
+2. Runs `pnpm version` to bump `package.json`, commit, and tag automatically
+3. Pushes commit and tag with `git push --follow-tags`
+4. Collects commits since the last tag and lets you pick which ones to include in release notes
+5. Categorises selected commits into New Features, Bug Fixes, and Chores
+6. Creates the GitHub release via `gh release create`
+
+**When to use this skill:**
+
+- You say "release", "publish version", or "สร้าง release"
+- Type: `/github-release` (or use the skill selector in Claude Code)
 
 ## Getting Started
 
@@ -46,9 +71,11 @@ npx skills@latest add warot-a/skills
 ### Using This Skill in Claude Code
 
 1. **CLI:** Run `claude-code` with `/teach-framework` skill
+
    ```bash
    claude
    ```
+
    Then type: `/teach-framework`
 
 2. **IDE Extensions:** Available in VS Code, JetBrains, and other supported IDEs
@@ -79,9 +106,11 @@ When you invoke the skill:
 
 ```
 skills/
+├── github-release/
+│   └── SKILL.md
 ├── teach-framework/
-│   └── SKILL.md          # Skill definition and teaching guidelines
-└── README.md             # This file
+│   └── SKILL.md
+└── README.md
 ```
 
 ## Framework Learning Paths
@@ -91,6 +120,7 @@ skills/
 **Prerequisites:** Node.js, npm/yarn
 
 **Concept Order:**
+
 1. Module system (app organization)
 2. Controllers (HTTP endpoints)
 3. Services (business logic)
@@ -106,6 +136,7 @@ skills/
 **Prerequisites:** Node.js, npm/yarn
 
 **Concept Order:**
+
 1. File-based routing (pages structure)
 2. Pages vs App Router (routing systems)
 3. Server Components (rendering strategy)
