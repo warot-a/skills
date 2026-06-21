@@ -54,6 +54,28 @@ A skill that guides you through the full release workflow end-to-end.
 - You say "release", "publish version", or "สร้าง release"
 - Type: `/github-release` (or use the skill selector in Claude Code)
 
+---
+
+### `git-stage-message`
+
+A skill that generates a conventional commit message from staged files without committing.
+
+**Purpose:** Get a ready-to-use `feat:/fix:/chore:/etc.` commit message from whatever you've staged with `git add`.
+
+**How it works:**
+
+1. Inspects `git diff --cached` to see what's staged
+2. Determines the commit type, optional scope, and a short imperative subject
+3. Outputs a single conventional commit message line
+
+**When to use this skill:**
+
+- You ask "what should my commit message be?"
+- You say "generate commit message" or "suggest message for staged files"
+- Type: `/git-stage-message` (or use the skill selector in Claude Code)
+
+---
+
 ## Getting Started
 
 ### Installation
@@ -108,6 +130,8 @@ When you invoke the skill:
 
 ```
 skills/
+├── git-stage-message/
+│   └── SKILL.md
 ├── github-release/
 │   └── SKILL.md
 ├── teach-framework/
